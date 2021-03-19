@@ -15,6 +15,20 @@
 		6A436E922604F52300162596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A436E902604F52300162596 /* LaunchScreen.storyboard */; };
 		6A436E9D2604F52300162596 /* celebrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436E9C2604F52300162596 /* celebrationTests.swift */; };
 		6A436EA82604F52300162596 /* celebrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EA72604F52300162596 /* celebrationUITests.swift */; };
+		6A436EB92604FE0E00162596 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EB82604FE0E00162596 /* LogInViewController.swift */; };
+		6A436EBE2604FECD00162596 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EBD2604FECD00162596 /* Create.swift */; };
+		6A436EC32604FF0D00162596 /* PassR1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EC22604FF0D00162596 /* PassR1.swift */; };
+		6A436EC82604FF7A00162596 /* PassR2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EC72604FF7A00162596 /* PassR2.swift */; };
+		6A436ECD2604FF8500162596 /* PassR3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436ECC2604FF8500162596 /* PassR3.swift */; };
+		6A436ED22604FF9100162596 /* PassR4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436ED12604FF9100162596 /* PassR4.swift */; };
+		6A436ED7260500AA00162596 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436ED6260500AA00162596 /* Home.swift */; };
+		6A436EDC260501E800162596 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EDB260501E800162596 /* CalendarView.swift */; };
+		6A436EE1260501F500162596 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EE0260501F500162596 /* ListView.swift */; };
+		6A436EEB2605021200162596 /* EditContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EEA2605021200162596 /* EditContact.swift */; };
+		6A436EF02605024500162596 /* ViewContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EEF2605024500162596 /* ViewContact.swift */; };
+		6A436EF52605025500162596 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EF42605025500162596 /* Mail.swift */; };
+		6A436EFA2605026700162596 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436EF92605026700162596 /* Settings.swift */; };
+		6A436F02260502B500162596 /* CreateContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436F01260502B500162596 /* CreateContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		6A436EA32604F52300162596 /* celebrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = celebrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A436EA72604F52300162596 /* celebrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celebrationUITests.swift; sourceTree = "<group>"; };
 		6A436EA92604F52300162596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A436EB82604FE0E00162596 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		6A436EBD2604FECD00162596 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
+		6A436EC22604FF0D00162596 /* PassR1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassR1.swift; sourceTree = "<group>"; };
+		6A436EC72604FF7A00162596 /* PassR2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassR2.swift; sourceTree = "<group>"; };
+		6A436ECC2604FF8500162596 /* PassR3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassR3.swift; sourceTree = "<group>"; };
+		6A436ED12604FF9100162596 /* PassR4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassR4.swift; sourceTree = "<group>"; };
+		6A436ED6260500AA00162596 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		6A436EDB260501E800162596 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		6A436EE0260501F500162596 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		6A436EEA2605021200162596 /* EditContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContact.swift; sourceTree = "<group>"; };
+		6A436EEF2605024500162596 /* ViewContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContact.swift; sourceTree = "<group>"; };
+		6A436EF42605025500162596 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
+		6A436EF92605026700162596 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6A436F01260502B500162596 /* CreateContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +107,19 @@
 		6A436E792604F52000162596 = {
 			isa = PBXGroup;
 			children = (
+				6A436F01260502B500162596 /* CreateContact.swift */,
+				6A436EDB260501E800162596 /* CalendarView.swift */,
+				6A436EE0260501F500162596 /* ListView.swift */,
+				6A436EEF2605024500162596 /* ViewContact.swift */,
+				6A436EF42605025500162596 /* Mail.swift */,
+				6A436EF92605026700162596 /* Settings.swift */,
+				6A436EEA2605021200162596 /* EditContact.swift */,
+				6A436ED6260500AA00162596 /* Home.swift */,
+				6A436EC72604FF7A00162596 /* PassR2.swift */,
+				6A436ECC2604FF8500162596 /* PassR3.swift */,
+				6A436ED12604FF9100162596 /* PassR4.swift */,
+				6A436EC22604FF0D00162596 /* PassR1.swift */,
+				6A436EBD2604FECD00162596 /* Create.swift */,
 				6A436E842604F52000162596 /* celebration */,
 				6A436E9B2604F52300162596 /* celebrationTests */,
 				6A436EA62604F52300162596 /* celebrationUITests */,
@@ -103,6 +144,7 @@
 				6A436E872604F52000162596 /* SceneDelegate.swift */,
 				6A436E892604F52000162596 /* ViewController.swift */,
 				6A436E8B2604F52000162596 /* Main.storyboard */,
+				6A436EB82604FE0E00162596 /* LogInViewController.swift */,
 				6A436E8E2604F52300162596 /* Assets.xcassets */,
 				6A436E902604F52300162596 /* LaunchScreen.storyboard */,
 				6A436E932604F52300162596 /* Info.plist */,
@@ -258,9 +300,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A436EEB2605021200162596 /* EditContact.swift in Sources */,
+				6A436EB92604FE0E00162596 /* LogInViewController.swift in Sources */,
+				6A436EFA2605026700162596 /* Settings.swift in Sources */,
+				6A436EC82604FF7A00162596 /* PassR2.swift in Sources */,
+				6A436ED7260500AA00162596 /* Home.swift in Sources */,
+				6A436ED22604FF9100162596 /* PassR4.swift in Sources */,
 				6A436E8A2604F52000162596 /* ViewController.swift in Sources */,
+				6A436ECD2604FF8500162596 /* PassR3.swift in Sources */,
+				6A436EF52605025500162596 /* Mail.swift in Sources */,
+				6A436EDC260501E800162596 /* CalendarView.swift in Sources */,
+				6A436EF02605024500162596 /* ViewContact.swift in Sources */,
 				6A436E862604F52000162596 /* AppDelegate.swift in Sources */,
+				6A436F02260502B500162596 /* CreateContact.swift in Sources */,
+				6A436EE1260501F500162596 /* ListView.swift in Sources */,
 				6A436E882604F52000162596 /* SceneDelegate.swift in Sources */,
+				6A436EBE2604FECD00162596 /* Create.swift in Sources */,
+				6A436EC32604FF0D00162596 /* PassR1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

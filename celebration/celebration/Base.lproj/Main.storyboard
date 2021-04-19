@@ -31,8 +31,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-HT-xdZ">
-                                <rect key="frame" x="28" y="84" width="358" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-HT-xdZ">
+                                <rect key="frame" x="28" y="81" width="358" height="46"/>
+                                <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Happy Birthday to...">
                                         <attributes>
@@ -192,6 +193,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-Pv-AyS">
+                                <rect key="frame" x="78" y="743" width="258" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="27"/>
+                                <state key="normal" title="Go To Calendar"/>
+                                <connections>
+                                    <segue destination="hDf-6d-Wd0" kind="presentation" modalPresentationStyle="fullScreen" id="Hjz-Eh-aaU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T1R-07-s9m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -301,26 +311,30 @@
                                 <rect key="frame" x="64" y="59" width="287" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="plus.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FfK-3J-mHj">
-                                <rect key="frame" x="359" y="77.5" width="41" height="19"/>
-                                <color key="tintColor" systemColor="systemTealColor"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="house.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-R0-Q7P">
-                                <rect key="frame" x="12" y="77" width="46" height="20"/>
-                                <color key="tintColor" red="0.091753207150000002" green="0.76914519069999998" blue="0.89042216539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-6u-b0o">
+                                <rect key="frame" x="11" y="22" width="43" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="house.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-2N-HOz">
+                                <rect key="frame" x="351" y="20.5" width="46" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HKf-Ng-uzo" kind="presentation" id="dvu-Kr-MvZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mZf-2f-aAA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mmb-2S-Si5" firstAttribute="centerX" secondItem="ixH-z9-vnt" secondAttribute="centerX" id="Aji-GV-AQn"/>
-                            <constraint firstItem="Mmb-2S-Si5" firstAttribute="centerY" secondItem="A9U-R0-Q7P" secondAttribute="centerY" id="HBR-Vx-NYt"/>
-                            <constraint firstItem="FfK-3J-mHj" firstAttribute="centerY" secondItem="A9U-R0-Q7P" secondAttribute="centerY" id="Io4-kI-PPZ"/>
                             <constraint firstItem="Mmb-2S-Si5" firstAttribute="top" secondItem="mZf-2f-aAA" secondAttribute="top" constant="15" id="dsO-Eg-zKp"/>
-                            <constraint firstItem="FfK-3J-mHj" firstAttribute="leading" secondItem="Mmb-2S-Si5" secondAttribute="trailing" constant="5" id="iAq-iX-M3D"/>
-                            <constraint firstItem="Mmb-2S-Si5" firstAttribute="leading" secondItem="A9U-R0-Q7P" secondAttribute="trailing" constant="5" id="uXa-JW-x0C"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hOc-lY-K1Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMR-au-U72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,24 +401,24 @@
             <objects>
                 <viewController id="HKf-Ng-uzo" customClass="CreateContact" customModule="celebration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8oo-Zy-5mz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1Y-o4-x4l">
-                                <rect key="frame" x="15" y="54" width="45" height="30"/>
+                                <rect key="frame" x="15" y="10" width="45" height="30"/>
                                 <state key="normal" title="cancel"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ez-vY-GWD">
-                                <rect key="frame" x="367" y="54" width="32" height="30"/>
+                                <rect key="frame" x="367" y="10" width="32" height="30"/>
                                 <state key="normal" title="save"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-wD-ybM">
-                                <rect key="frame" x="226" y="271" width="168" height="34"/>
+                                <rect key="frame" x="226" y="227" width="168" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBK-aE-fAg">
-                                <rect key="frame" x="20" y="271" width="168" height="34"/>
+                                <rect key="frame" x="20" y="227" width="168" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="9YJ-G7-TgO"/>
                                     <constraint firstAttribute="width" constant="168" id="Y4I-VZ-mGN"/>
@@ -413,13 +427,13 @@
                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-VR-R1K">
-                                <rect key="frame" x="120" y="86" width="174" height="167"/>
+                                <rect key="frame" x="120" y="42" width="174" height="167"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="167" id="55G-R5-eh2"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ja3-OA-gsj">
-                                <rect key="frame" x="20" y="325" width="374" height="537"/>
+                                <rect key="frame" x="20" y="281" width="374" height="527"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="0Fg-sp-0R5">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
@@ -535,9 +549,6 @@
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

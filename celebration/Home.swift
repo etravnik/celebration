@@ -61,6 +61,24 @@ class Home: UIViewController {
             
             contactNameTwo.text = fullNameTwo;
             
+            // get all contacts from phone and store in array
+            var big_contacts = [CNContact]();
+            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey as CNKeyDescriptor];
+            let big_request = CNContactFetchRequest(keysToFetch: big_keys)
+            
+            try store.enumerateContacts(with: big_request) {
+                (contact, stop) in
+                big_contacts.append(contact)
+            }
+            
+            // filter array of contacts based on who has a birthday
+            let bday_contacts = big_contacts.filter { $0.birthday?.day != nil }
+            for contact in bday_contacts {
+                print("oh boy here we go: \(String(describing: contact.familyName)) \(String(describing: contact.birthday?.year))");
+            }
+            
+            //print("oh boy here we go: \(String(describing: contactsTwo[0].familyName)) \(String(describing: contactsTwo[0].birthday?.year))");
+            
         } catch {
             print("Failed to fetch contact, error: \(error)");
         }

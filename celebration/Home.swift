@@ -7,8 +7,11 @@
 
 import UIKit
 import Contacts
+import CoreData
 
 class Home: UIViewController {
+    
+    var container: NSPersistentContainer!
 
     let contact = CNMutableContact();
     let store = CNContactStore();
@@ -19,26 +22,10 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /*contact.givenName = "Connor";
-        contact.familyName = "Kuse";
         
-        var birthday = DateComponents();
-        birthday.day = 20;
-        birthday.month = 8;
-        birthday.year = 1999;
-        contact.birthday = birthday;
-        
-        // save contact via request
-        let saveRequest = CNSaveRequest();
-        saveRequest.add(contact, toContainerWithIdentifier: nil)
-        
-        do {
-            try store.execute(saveRequest);
-            loaded = true;
-        } catch {
-            print("Saving contact failed, error: \(error)");
-        }*/
+        guard container != nil else {
+            fatalError("This view needs a persistent container.")
+        }
         
         do {
             let predicate = CNContact.predicateForContacts(matchingName: "Travnik");

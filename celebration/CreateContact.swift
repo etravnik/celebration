@@ -9,6 +9,9 @@ import UIKit
 
 class CreateContact: UIViewController {
 
+    @IBAction func cancelButton(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

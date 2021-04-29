@@ -300,12 +300,16 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-6u-b0o">
-                                <rect key="frame" x="11" y="22" width="43" height="35"/>
+                                <rect key="frame" x="11" y="67" width="43" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="house.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="homeButton:" destination="hDf-6d-Wd0" eventType="touchUpInside" id="M4H-OB-LWj"/>
+                                    <action selector="homeButton:" destination="2YN-Sy-hr5" eventType="touchUpInside" id="d63-er-1cF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-2N-HOz">
-                                <rect key="frame" x="351" y="20.5" width="46" height="43"/>
+                                <rect key="frame" x="359" y="58.5" width="46" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -325,6 +329,7 @@
                     <navigationItem key="navigationItem" id="hOc-lY-K1Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMR-au-U72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2YN-Sy-hr5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-410.14492753623193" y="-78.348214285714278"/>
         </scene>
@@ -395,6 +400,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1Y-o4-x4l">
                                 <rect key="frame" x="15" y="10" width="45" height="30"/>
                                 <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="HKf-Ng-uzo" eventType="touchUpInside" id="xyn-Li-JhU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ez-vY-GWD">
                                 <rect key="frame" x="367" y="10" width="32" height="30"/>

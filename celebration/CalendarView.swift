@@ -9,6 +9,9 @@ import UIKit
 
 class CalendarView: UIViewController {
 
+    @IBAction func homeButton(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

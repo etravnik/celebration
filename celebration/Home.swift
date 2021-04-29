@@ -7,11 +7,8 @@
 
 import UIKit
 import Contacts
-import CoreData
 
 class Home: UIViewController {
-    
-    var container: NSPersistentContainer!
 
     let contact = CNMutableContact();
     let store = CNContactStore();
@@ -23,23 +20,10 @@ class Home: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard container != nil else {
-            fatalError("This view needs a persistent container.")
-        }
-        
         do {
-            let predicate = CNContact.predicateForContacts(matchingName: "Travnik");
-            let keysToFetch = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey as CNKeyDescriptor];
-            let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch);
-            let firstMatch = contacts[0];
             
-            print("Fetched contacts: \(firstMatch)");
-            let fullNameOne = CNContactFormatter.string(from: firstMatch, style: .fullName);
-            
-            contactNameOne.text = fullNameOne;
-            
-            let predicateTwo = CNContact.predicateForContacts(matchingName: "Kuse");
-            let keysToFetchTwo = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey as CNKeyDescriptor];
+            /*let predicateTwo = CNContact.predicateForContacts(matchingName: "Kuse");
+            /let keysToFetchTwo = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey as CNKeyDescriptor];
             let contactsTwo = try store.unifiedContacts(matching: predicateTwo, keysToFetch: keysToFetchTwo);
             let firstMatchTwo = contactsTwo[0];
             
@@ -47,6 +31,7 @@ class Home: UIViewController {
             let fullNameTwo = CNContactFormatter.string(from: firstMatchTwo, style: .fullName);
             
             contactNameTwo.text = fullNameTwo;
+            */
             
             // get all contacts from phone and store in array
             var big_contacts = [CNContact]();

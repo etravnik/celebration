@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0210F3E9263AD2D800B5F5E7 /* contactModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0210F3E7263AD2D800B5F5E7 /* contactModel.xcdatamodeld */; };
 		0863E61052289C60437F2BD0 /* Pods_celebration_celebrationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CAFFC02CF9CD3BA252ED9 /* Pods_celebration_celebrationUITests.framework */; };
 		45E1D80F8C76A75158D5B385 /* Pods_celebrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7581507F82FDD4977EBE5B /* Pods_celebrationTests.framework */; };
 		6A436E862604F52000162596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436E852604F52000162596 /* AppDelegate.swift */; };
@@ -53,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0210F3E8263AD2D800B5F5E7 /* contactModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = contactModel.xcdatamodel; sourceTree = "<group>"; };
 		124C3ADAEEEE94DE837FC409 /* Pods-celebrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celebrationTests.release.xcconfig"; path = "Target Support Files/Pods-celebrationTests/Pods-celebrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C02A5991A30C09C379B4990 /* Pods-celebration-celebrationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celebration-celebrationUITests.debug.xcconfig"; path = "Target Support Files/Pods-celebration-celebrationUITests/Pods-celebration-celebrationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		575119EE8E5FEE3A5AD5729C /* Pods-celebration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celebration.release.xcconfig"; path = "Target Support Files/Pods-celebration/Pods-celebration.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				6A436EF92605026700162596 /* Settings.swift */,
 				6A436EEA2605021200162596 /* EditContact.swift */,
 				6A436ED6260500AA00162596 /* Home.swift */,
-				0210F3E7263AD2D800B5F5E7 /* contactModel.xcdatamodeld */,
 				6A436EC72604FF7A00162596 /* PassR2.swift */,
 				6A436ECC2604FF8500162596 /* PassR3.swift */,
 				6A436ED12604FF9100162596 /* PassR4.swift */,
@@ -453,7 +450,6 @@
 			files = (
 				6A436EEB2605021200162596 /* EditContact.swift in Sources */,
 				6A436EB92604FE0E00162596 /* LogInViewController.swift in Sources */,
-				0210F3E9263AD2D800B5F5E7 /* contactModel.xcdatamodeld in Sources */,
 				6A436EFA2605026700162596 /* Settings.swift in Sources */,
 				6A436EC82604FF7A00162596 /* PassR2.swift in Sources */,
 				6A436ED7260500AA00162596 /* Home.swift in Sources */,
@@ -807,19 +803,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0210F3E7263AD2D800B5F5E7 /* contactModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0210F3E8263AD2D800B5F5E7 /* contactModel.xcdatamodel */,
-			);
-			currentVersion = 0210F3E8263AD2D800B5F5E7 /* contactModel.xcdatamodel */;
-			path = contactModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6A436E7A2604F52000162596 /* Project object */;
 }

@@ -407,6 +407,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ez-vY-GWD">
                                 <rect key="frame" x="367" y="10" width="32" height="30"/>
                                 <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="HKf-Ng-uzo" eventType="touchUpInside" id="Vu0-Az-Yne"/>
+                                    <segue destination="shU-fb-1HO" kind="unwind" unwindAction="unwindToCalendar:" id="sw6-kp-lTe"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-wD-ybM">
                                 <rect key="frame" x="226" y="227" width="168" height="34"/>
@@ -474,8 +478,14 @@
                             <constraint firstItem="fv3-VR-R1K" firstAttribute="centerX" secondItem="ja3-OA-gsj" secondAttribute="centerX" id="z0L-q6-GSg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthdayPicker" destination="Rjf-G2-VOP" id="4bq-V2-fSs"/>
+                        <outlet property="firstNameField" destination="aDc-wD-ybM" id="B0n-TM-xVA"/>
+                        <outlet property="lastNameField" destination="SBK-aE-fAg" id="IMF-KV-ckv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zf-nI-fN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="shU-fb-1HO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1265.217391304348" y="654.91071428571422"/>
         </scene>

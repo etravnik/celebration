@@ -26,7 +26,6 @@ class CalendarView: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
         super.viewDidLoad()
         
         contact_list = getContacts()
-
         calendarMain.delegate = self
         calendarMain.dataSource = self
         // Do any additional setup after loading the view.
@@ -37,7 +36,6 @@ class CalendarView: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     // MARK: - FS Calendar DataSource
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        //let currentDate = Date()
         let calendar = Calendar.current
         
         /*print(calendar.component(.year, from: currentDate))
@@ -50,11 +48,6 @@ class CalendarView: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
             }
         }
         
-        /*formatter.dateFormat = "MM-dd-yyyy"
-        guard let eventDate = formatter.date(from: "04-25-2021") else {return 0}
-        if date.compare(eventDate) == .orderedSame {
-            return 1
-        }*/
         return 0
     }
     
@@ -96,7 +89,8 @@ class CalendarView: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     */
     
     @IBAction func unwindToCalendar (_ sender: UIStoryboardSegue) {
-        
+        contact_list = getContacts()
+        calendarMain.reloadData()
     }
 
 }

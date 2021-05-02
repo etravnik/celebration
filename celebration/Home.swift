@@ -12,9 +12,6 @@ import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
 import MaterialComponents.MaterialCards
 import MaterialComponents.MaterialCards_Theming
-import MaterialComponents.MaterialButtons_ButtonThemer
-import MaterialComponents.MaterialContainerScheme
-import MaterialComponents.MaterialActionSheet
 
 //import MDCCardCollectionCell
 
@@ -34,60 +31,6 @@ class Home: UIViewController {
     @IBOutlet weak var birthdayTwo: UILabel!
     @IBOutlet weak var birthdayThree: UILabel!
 
-    /*
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        let button = UIButton(frame: CGRect(x: (view.frame.size.width-220)/2,
-                                            y: 100,
-                                            width: 220,
-                                            height: 50))
-        button.setTitle("Alert", for: .normal)
-        button.backgroundColor = .systemGreen
-        button.addTarget(self, action: #selector(didTapAlert), for: .touchUpInside)
-        view.addSubview(button)
-        
-        let sheetButton = UIButton(frame: CGRect(x: (view.frame.size.width-220)/2,
-                                            y: 200,
-                                            width: 220,
-                                            height: 50))
-        sheetButton.setTitle("Action Sheet", for: .normal)
-        sheetButton.backgroundColor = .systemBlue
-        sheetButton.addTarget(self, action: #selector(didTapActionSheet), for: .touchUpInside)
-        view.addSubview(sheetButton)
-    }
-    
-    @objc private func didTapAlert() {
-        let alertController = MDCAlertController(title: "Log Out", message: "Sure Log Out?")
-        let action1 = MDCAlertAction(title:"cancel") { (action) in
-            print("OK")
-        }
-        let action2 = MDCAlertAction(title:"Log Out", emphasis: .high) { (action) in
-            print("OK")
-        }
-        alertController.addAction(action2)
-        alertController.addAction(action1)
-
-        present(alertController, animated:true, completion: nil)
-    }
-    
-    @objc private func didTapActionSheet() {
-        let actionSheet = MDCActionSheetController(title: "Action Sheet",
-                                                   message: "Secondary line text")
-        let actionOne = MDCActionSheetAction(title: "Home",
-                                             image: UIImage(systemName: "house"),
-                                             handler: { _ in
-                                                print("Home action") })
-        let actionTwo = MDCActionSheetAction(title: "Settings",
-                                             image: UIImage(systemName: "gear"),
-                                             handler: { _ in
-                                                print("Email action") })
-        actionSheet.addAction(actionOne)
-        actionSheet.addAction(actionTwo)
-
-        present(actionSheet, animated: true, completion: nil)
-    }
-    */
     
     override func viewDidLoad() {
         super.viewDidLoad()

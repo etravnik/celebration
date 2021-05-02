@@ -536,16 +536,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-2S-Si5">
-                                <rect key="frame" x="82" y="59" width="250" height="56"/>
+                                <rect key="frame" x="74" y="59" width="250" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bdm-ed-gsm"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-6u-b0o">
-                                <rect key="frame" x="10" y="67" width="34" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-6u-b0o">
+                                <rect key="frame" x="10" y="67" width="44" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="cCN-6u-b0o" secondAttribute="height" multiplier="67:35" id="uIP-Ui-CrB"/>
+                                    <constraint firstAttribute="width" constant="44" id="j7g-rh-f7h"/>
+                                    <constraint firstAttribute="width" secondItem="cCN-6u-b0o" secondAttribute="height" multiplier="34:27" id="yy0-vY-GVx"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="house.fill" catalog="system"/>
                                 <connections>
@@ -579,9 +580,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-2N-HOz">
-                                <rect key="frame" x="352" y="68" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-2N-HOz">
+                                <rect key="frame" x="344" y="67.5" width="36" height="35"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="NgF-OX-w6H"/>
                                     <constraint firstAttribute="width" secondItem="sgW-2N-HOz" secondAttribute="height" multiplier="1:1" id="rIU-16-hXY"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="plus.circle.fill" catalog="system">

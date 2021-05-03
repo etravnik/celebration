@@ -20,6 +20,8 @@ class Home: UIViewController {
     
     let Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+    let currentDate = Date();
+    let calendar = Calendar.current;
     let contact = CNMutableContact();
     let store = CNContactStore();
     var loaded = false;
@@ -30,7 +32,10 @@ class Home: UIViewController {
     @IBOutlet weak var birthdayOne: UILabel!
     @IBOutlet weak var birthdayTwo: UILabel!
     @IBOutlet weak var birthdayThree: UILabel!
-
+    @IBOutlet weak var ageOne: UILabel!
+    @IBOutlet weak var ageTwo: UILabel!
+    @IBOutlet weak var ageThree: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,18 +98,33 @@ class Home: UIViewController {
                 let curr_contact = bday_contacts[0]
                 contactNameOne.text = CNContactFormatter.string(from: curr_contact, style: .fullName)
                 birthdayOne.text = Months[(curr_contact.birthday?.month)! - 1] + " \((curr_contact.birthday?.day)!)"
+                if curr_contact.birthday?.year == nil {
+                    ageOne.text = ""
+                } else {
+                    ageOne.text = "Turning \(calendar.component(.year, from: currentDate) - (curr_contact.birthday?.year)!)"
+                }
             }
             
             if bday_contacts.count > 1 {
                 let curr_contact = bday_contacts[1]
                 contactNameTwo.text = CNContactFormatter.string(from: curr_contact, style: .fullName)
                 birthdayTwo.text = Months[(curr_contact.birthday?.month)! - 1] + " \((curr_contact.birthday?.day)!)"
+                if curr_contact.birthday?.year == nil {
+                    ageTwo.text = ""
+                } else {
+                    ageTwo.text = "Turning \(calendar.component(.year, from: currentDate) - (curr_contact.birthday?.year)!)"
+                }
             }
             
             if bday_contacts.count > 2 {
                 let curr_contact = bday_contacts[2]
                 contactNameThree.text = CNContactFormatter.string(from: curr_contact, style: .fullName)
                 birthdayThree.text = Months[(curr_contact.birthday?.month)! - 1] + " \((curr_contact.birthday?.day)!)"
+                if curr_contact.birthday?.year == nil {
+                    ageThree.text = ""
+                } else {
+                    ageThree.text = "Turning \(calendar.component(.year, from: currentDate) - (curr_contact.birthday?.year)!)"
+                }
             }
             
         } catch {

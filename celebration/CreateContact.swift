@@ -7,6 +7,10 @@
 
 import UIKit
 import Contacts
+import MaterialComponents.MaterialTextControls_FilledTextAreas
+import MaterialComponents.MaterialTextControls_FilledTextFields
+import MaterialComponents.MaterialTextControls_OutlinedTextAreas
+import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 class CreateContact: UIViewController {
 

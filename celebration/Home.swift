@@ -92,19 +92,19 @@ class Home: UIViewController {
             if bday_contacts.count > 0 {
                 let curr_contact = bday_contacts[0]
                 contactNameOne.text = CNContactFormatter.string(from: curr_contact, style: .fullName)
-                birthdayOne.text = Months[(bday_contacts[0].birthday?.month)! - 1] + " \((bday_contacts[0].birthday?.day)!)"
+                birthdayOne.text = Months[(curr_contact.birthday?.month)! - 1] + " \((curr_contact.birthday?.day)!)"
             }
             
             if bday_contacts.count > 1 {
                 let curr_contact = bday_contacts[1]
                 contactNameTwo.text = CNContactFormatter.string(from: curr_contact, style: .fullName)
-                birthdayTwo.text = Months[(bday_contacts[1].birthday?.month)! - 1] + " \((bday_contacts[1].birthday?.day)!)"
+                birthdayTwo.text = Months[(curr_contact.birthday?.month)! - 1] + " \((curr_contact.birthday?.day)!)"
             }
             
             if bday_contacts.count > 2 {
                 let curr_contact = bday_contacts[2]
                 contactNameThree.text = CNContactFormatter.string(from: curr_contact, style: .fullName)
-                birthdayThree.text = Months[(bday_contacts[1].birthday?.month)! - 1] + " \((bday_contacts[1].birthday?.day)!)"
+                birthdayThree.text = Months[(curr_contact.birthday?.month)! - 1] + " \((curr_contact.birthday?.day)!)"
             }
             
         } catch {

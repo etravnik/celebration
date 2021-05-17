@@ -25,6 +25,8 @@ class Home: UIViewController {
     let contact = CNMutableContact();
     let store = CNContactStore();
     var loaded = false;
+    var bday_contacts = [CNContact]()
+    var segueContact = CNContact();
     
     @IBOutlet weak var contactNameOne: UILabel!
     @IBOutlet weak var contactNameTwo: UILabel!
@@ -35,6 +37,9 @@ class Home: UIViewController {
     @IBOutlet weak var ageOne: UILabel!
     @IBOutlet weak var ageTwo: UILabel!
     @IBOutlet weak var ageThree: UILabel!
+    @IBOutlet weak var cardOne: MDCCard!
+    @IBOutlet weak var cardTwo: MDCCard!
+    @IBOutlet weak var cardThree: MDCCard!
     
     
     override func viewDidLoad() {
@@ -64,7 +69,7 @@ class Home: UIViewController {
             }
             
             // filter array of contacts based on who has a birthday
-            var bday_contacts = big_contacts.filter { $0.birthday?.day != nil }
+            bday_contacts = big_contacts.filter { $0.birthday?.day != nil }
             
             let currentDate = Date()
             let calendar = Calendar.current
@@ -79,7 +84,7 @@ class Home: UIViewController {
             bday_contacts.sort { ($0.birthday?.month)! < ($1.birthday?.month)! }
             
             for contact in bday_contacts {
-                print("oh boy here we go: \(String(describing: contact.familyName)) \(String(describing: contact.birthday?.year))");
+                // print("oh boy here we go: \(String(describing: contact.familyName)) \(String(describing: contact.birthday?.year))");
             }
             
             print("-------------------")
@@ -90,7 +95,7 @@ class Home: UIViewController {
             }
             
             for contact in bday_contacts {
-                print("oh boy here we go: \(String(describing: contact.familyName)) \(String(describing: contact.birthday?.year))");
+                // print("oh boy here we go: \(String(describing: contact.familyName)) \(String(describing: contact.birthday?.year))");
             }
             //let fullNameTwo = CNContactFormatter.string(from: firstMatchTwo, style: .fullName);
             
@@ -131,8 +136,44 @@ class Home: UIViewController {
             print("Failed to fetch contact, error: \(error)");
         }
         // Do any additional setup after loading the view.
+        
+        cardOne.isUserInteractionEnabled = true;
+        cardTwo.isUserInteractionEnabled = true;
+        cardThree.isUserInteractionEnabled = true;
+        
+        let tapOne = UITapGestureRecognizer(target: self, action: #selector(Home.tapFuncOne))
+        let tapTwo = UITapGestureRecognizer(target: self, action: #selector(Home.tapFuncTwo))
+        let tapThree = UITapGestureRecognizer(target: self, action: #selector(Home.tapFuncThree))
+        cardOne.addGestureRecognizer(tapOne)
+        cardTwo.addGestureRecognizer(tapTwo)
+        cardThree.addGestureRecognizer(tapThree)
     }
     
+    @objc func tapFuncOne(sender:UITapGestureRecognizer) {
+        segueContact = bday_contacts[0]
+        goToViewContact(contact:segueContact)
+    }
+    
+    @objc func tapFuncTwo(sender:UITapGestureRecognizer) {
+        segueContact = bday_contacts[1]
+        goToViewContact(contact:segueContact)
+    }
+    
+    @objc func tapFuncThree(sender:UITapGestureRecognizer) {
+        segueContact = bday_contacts[2]
+        goToViewContact(contact:segueContact)
+    }
+    
+    func goToViewContact(contact:CNContact) {
+        performSegue(withIdentifier: "viewSegueOne", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "viewSegueOne") {
+            let destinationVC = segue.destination as! ViewContact
+            destinationVC.contact = segueContact
+        }
+    }
 
     /*
     // MARK: - Navigation

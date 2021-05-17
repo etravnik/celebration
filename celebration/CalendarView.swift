@@ -38,6 +38,7 @@ class CalendarView: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         calendarMain.delegate = self
         calendarMain.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
     
@@ -129,6 +130,15 @@ class CalendarView: UIViewController, UITableViewDataSource, UITableViewDelegate
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSegueFour" {
+            let destination = segue.destination as! ViewContact
+            let bdayIndex = (calendarList.indexPathForSelectedRow?.row)!
+            
+            destination.contact = s_contact_list[bdayIndex]
+        }
+    }
     
     @IBAction func unwindToCalendar (_ sender: UIStoryboardSegue) {
         contact_list = getContacts()

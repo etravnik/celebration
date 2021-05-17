@@ -13,7 +13,8 @@ class ViewContact: UIViewController {
     @IBOutlet weak var contactName: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var giftIdeasLabel: UILabel!
-    @IBOutlet weak var pastGiftsLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    
     
     var contact = CNContact()
     
@@ -28,6 +29,14 @@ class ViewContact: UIViewController {
         }
         
         birthdayLabel.text = bdayString
+        
+        giftIdeasLabel.text = contact.note
+        
+        var digits = "";
+        for number in contact.phoneNumbers {
+            digits += "\(number.value.stringValue)\n"
+        }
+        phoneNumberLabel.text = digits;
         // Do any additional setup after loading the view.
     }
     

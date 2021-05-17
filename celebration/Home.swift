@@ -60,7 +60,7 @@ class Home: UIViewController {
             
             // get all contacts from phone and store in array
             var big_contacts = [CNContact]();
-            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey as CNKeyDescriptor];
+            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey, CNContactPhoneNumbersKey, CNContactNoteKey] as! [CNKeyDescriptor];
             let big_request = CNContactFetchRequest(keysToFetch: big_keys)
             
             try store.enumerateContacts(with: big_request) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F9C8202652EA8B00BDEC03 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F9C81F2652EA8B00BDEC03 /* PassKit.framework */; };
 		0863E61052289C60437F2BD0 /* Pods_celebration_celebrationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CAFFC02CF9CD3BA252ED9 /* Pods_celebration_celebrationUITests.framework */; };
 		45E1D80F8C76A75158D5B385 /* Pods_celebrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7581507F82FDD4977EBE5B /* Pods_celebrationTests.framework */; };
 		6A436E862604F52000162596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A436E852604F52000162596 /* AppDelegate.swift */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F9C81E2652EA8B00BDEC03 /* celebration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = celebration.entitlements; sourceTree = "<group>"; };
+		02F9C81F2652EA8B00BDEC03 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		124C3ADAEEEE94DE837FC409 /* Pods-celebrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celebrationTests.release.xcconfig"; path = "Target Support Files/Pods-celebrationTests/Pods-celebrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C02A5991A30C09C379B4990 /* Pods-celebration-celebrationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celebration-celebrationUITests.debug.xcconfig"; path = "Target Support Files/Pods-celebration-celebrationUITests/Pods-celebration-celebrationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		575119EE8E5FEE3A5AD5729C /* Pods-celebration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celebration.release.xcconfig"; path = "Target Support Files/Pods-celebration/Pods-celebration.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F9C8202652EA8B00BDEC03 /* PassKit.framework in Frameworks */,
 				BE9BB316D76B029916D5690F /* Pods_celebration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +139,7 @@
 		1870F51EB941E32E16A1F2EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02F9C81F2652EA8B00BDEC03 /* PassKit.framework */,
 				D6E1ED393C67BD083058C3B7 /* Pods_celebration.framework */,
 				BC9CAFFC02CF9CD3BA252ED9 /* Pods_celebration_celebrationUITests.framework */,
 				7B7581507F82FDD4977EBE5B /* Pods_celebrationTests.framework */,
@@ -180,6 +185,7 @@
 		6A436E842604F52000162596 /* celebration */ = {
 			isa = PBXGroup;
 			children = (
+				02F9C81E2652EA8B00BDEC03 /* celebration.entitlements */,
 				6A436E852604F52000162596 /* AppDelegate.swift */,
 				6A436E872604F52000162596 /* SceneDelegate.swift */,
 				6A436E892604F52000162596 /* ViewController.swift */,
@@ -641,6 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = celebration/celebration.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 47J734W9F8;
@@ -663,6 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = celebration/celebration.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 47J734W9F8;

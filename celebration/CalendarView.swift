@@ -65,6 +65,7 @@ class CalendarView: UIViewController, UITableViewDataSource, UITableViewDelegate
             }
         }
         s_contact_list = tempList
+        print(s_contact_list)
         calendarList.reloadData()
     }
     
@@ -89,7 +90,7 @@ class CalendarView: UIViewController, UITableViewDataSource, UITableViewDelegate
     func getContacts() -> [CNContact] {
         do {
             var big_contacts = [CNContact]();
-            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey, CNContactPhoneNumbersKey, CNContactNoteKey] as! [CNKeyDescriptor];
+            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey, CNContactPhoneNumbersKey, CNContactNoteKey, CNContactImageDataKey, CNContactImageDataAvailableKey] as! [CNKeyDescriptor];
             let big_request = CNContactFetchRequest(keysToFetch: big_keys)
             
             try store.enumerateContacts(with: big_request) {

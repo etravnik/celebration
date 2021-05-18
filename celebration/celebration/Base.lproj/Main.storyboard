@@ -398,6 +398,9 @@
                         <outlet property="contactNameOne" destination="jEj-aX-9eY" id="zbI-FS-Gbh"/>
                         <outlet property="contactNameThree" destination="fK9-Si-pGO" id="VKh-iU-t7t"/>
                         <outlet property="contactNameTwo" destination="2ZD-9O-oG3" id="KWd-uI-sX6"/>
+                        <outlet property="profPicOne" destination="RFM-Mw-KUr" id="loN-BA-CPG"/>
+                        <outlet property="profPicThree" destination="pdb-Xw-n9l" id="EA0-0y-6DI"/>
+                        <outlet property="profPicTwo" destination="8Ii-Gm-W4K" id="UU6-wc-p9S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZi-rv-FUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1105,6 +1108,7 @@
                         <outlet property="contactName" destination="bzm-b6-BKw" id="7TG-az-IpA"/>
                         <outlet property="giftIdeasLabel" destination="jfd-zg-YNl" id="Rsp-92-IO5"/>
                         <outlet property="phoneNumberLabel" destination="4fw-dV-L6z" id="rBH-9K-RVA"/>
+                        <outlet property="profilePic" destination="Q7i-qh-vZW" id="PzM-gQ-uiP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLK-cu-oH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

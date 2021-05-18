@@ -14,6 +14,7 @@ class ViewContact: UIViewController {
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var giftIdeasLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     
     
     var contact = CNContact()
@@ -21,22 +22,28 @@ class ViewContact: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var bigImage = UIImage(systemName: "person.crop.circle")
+        if contact.imageDataAvailable {
+            bigImage = UIImage(data: contact.imageData!)!
+        }
+        
+        profilePic.image = bigImage
+        
         contactName.text = CNContactFormatter.string(from: contact, style: .fullName)
         
         var bdayString = "\((contact.birthday?.month)!)/\((contact.birthday?.day)!)"
         if (contact.birthday?.year) != nil {
             bdayString += "/\((contact.birthday?.year)!)"
         }
-        
         birthdayLabel.text = bdayString
         
         giftIdeasLabel.text = contact.note
         
-        var digits = "";
-        for number in contact.phoneNumbers {
-            digits += "\(number.value.stringValue)\n"
+        var digits = ""
+        if !contact.phoneNumbers.isEmpty{
+            digits = contact.phoneNumbers[0].value.stringValue
         }
-        phoneNumberLabel.text = digits;
+        phoneNumberLabel.text = digits
         // Do any additional setup after loading the view.
     }
     

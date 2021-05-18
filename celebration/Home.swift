@@ -40,6 +40,9 @@ class Home: UIViewController {
     @IBOutlet weak var cardOne: MDCCard!
     @IBOutlet weak var cardTwo: MDCCard!
     @IBOutlet weak var cardThree: MDCCard!
+    @IBOutlet weak var profPicOne: UIImageView!
+    @IBOutlet weak var profPicTwo: UIImageView!
+    @IBOutlet weak var profPicThree: UIImageView!
     
     
     override func viewDidLoad() {
@@ -60,7 +63,7 @@ class Home: UIViewController {
             
             // get all contacts from phone and store in array
             var big_contacts = [CNContact]();
-            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey, CNContactPhoneNumbersKey, CNContactNoteKey] as! [CNKeyDescriptor];
+            let big_keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactBirthdayKey, CNContactPhoneNumbersKey, CNContactNoteKey, CNContactImageDataKey, CNContactImageDataAvailableKey] as! [CNKeyDescriptor];
             let big_request = CNContactFetchRequest(keysToFetch: big_keys)
             
             try store.enumerateContacts(with: big_request) {
@@ -108,6 +111,11 @@ class Home: UIViewController {
                 } else {
                     ageOne.text = "Turning \(calendar.component(.year, from: currentDate) - (curr_contact.birthday?.year)!)"
                 }
+                var bigImage = UIImage(systemName: "person.crop.circle")
+                if curr_contact.imageDataAvailable {
+                    bigImage = UIImage(data: curr_contact.imageData!)!
+                }
+                profPicOne.image = bigImage
             }
             
             if bday_contacts.count > 1 {
@@ -119,6 +127,11 @@ class Home: UIViewController {
                 } else {
                     ageTwo.text = "Turning \(calendar.component(.year, from: currentDate) - (curr_contact.birthday?.year)!)"
                 }
+                var bigImage = UIImage(systemName: "person.crop.circle")
+                if curr_contact.imageDataAvailable {
+                    bigImage = UIImage(data: curr_contact.imageData!)!
+                }
+                profPicTwo.image = bigImage
             }
             
             if bday_contacts.count > 2 {
@@ -130,6 +143,11 @@ class Home: UIViewController {
                 } else {
                     ageThree.text = "Turning \(calendar.component(.year, from: currentDate) - (curr_contact.birthday?.year)!)"
                 }
+                var bigImage = UIImage(systemName: "person.crop.circle")
+                if curr_contact.imageDataAvailable {
+                    bigImage = UIImage(data: curr_contact.imageData!)!
+                }
+                profPicThree.image = bigImage
             }
             
         } catch {
